@@ -1,3 +1,4 @@
+package com.jacobarchambault.workerdemo;
 
 public class Employee {
 	private String name; // Employee name

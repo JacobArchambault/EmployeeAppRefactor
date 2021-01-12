@@ -1,3 +1,4 @@
+package com.jacobarchambault.workerdemo;
 import java.text.DecimalFormat;
 
 /**
