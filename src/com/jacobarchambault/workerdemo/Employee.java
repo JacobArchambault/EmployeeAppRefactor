@@ -20,13 +20,11 @@ public class Employee {
 	}
 
 	/**
-	 * The no-arg constructor initializes an object with null strings for name,
+	 * The no-arg constructor initializes an object with empty strings for name,
 	 * employee number, and hire date.
 	 */
 	public Employee() {
-		name = "";
-		employeeNumber = "";
-		hireDate = "";
+		this("", "", "");
 	}
 
 	/**
