@@ -1,5 +1,8 @@
 package com.jacobarchambault.workerdemo;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 /**
  * @author jacobarchambault
  *
@@ -57,5 +60,14 @@ public class TeamLeader extends ProductionWorker {
 	public void setTrainingHoursAttended(double trainingHoursAttended) {
 		this.trainingHoursAttended = trainingHoursAttended;
 	}
+	@Override
+	public String toString() {
+		String str = super.toString();
+		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance().format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
+				+ "\nTraining hours attended: " + trainingHoursAttended;
+		return str;
+	}
+	
+	
 
 }
