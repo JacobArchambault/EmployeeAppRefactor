@@ -11,17 +11,8 @@ public class WorkerDemo {
 		System.out.println("Here's the first team leader.");
 		tl.info();
 
-		// Create another ProductionWorker object and use the
-		// set methods.
-		TeamLeader pw2 = new TeamLeader();
-		pw2.setName("Joan Jones");
-		pw2.setEmployeeNumber("222-L");
-		pw2.setHireDate("12-12-2005");
-		pw2.setShift(ProductionWorker.NIGHT_SHIFT);
-		pw2.setPayRate(18.50);
-		pw2.setMonthlyBonus(10000);
-		pw2.setRequiredTrainingHours(30);
-		pw2.setTrainingHoursAttended(10);
+		// Create another ProductionWorker object.
+		TeamLeader pw2 = new TeamLeader("Joan Jones", "222-L", "12-12-2005", ProductionWorker.NIGHT_SHIFT, 18.50, 10000, 30, 10);
 
 		// Display the data.
 		System.out.println("\nHere's the second team leader.");

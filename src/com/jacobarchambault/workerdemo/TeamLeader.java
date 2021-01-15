@@ -12,12 +12,14 @@ public class TeamLeader extends ProductionWorker {
 	double requiredTrainingHours;
 	double trainingHoursAttended;
 
-	public TeamLeader(String n, String num, String date, int sh, double rate, double bonus, double requiredHours, double hoursAttended) {
+	public TeamLeader(String n, String num, String date, int sh, double rate, double bonus, double requiredHours,
+			double hoursAttended) {
 		super(n, num, date, sh, rate);
 		monthlyBonus = bonus;
 		requiredTrainingHours = requiredHours;
 		trainingHoursAttended = hoursAttended;
 	}
+
 	public TeamLeader(double bonus, double hoursRequired, double hoursAttended) {
 		super();
 		monthlyBonus = bonus;
@@ -28,6 +30,7 @@ public class TeamLeader extends ProductionWorker {
 	public TeamLeader() {
 		this(0, 0, 0);
 	}
+
 	public double getMonthlyBonus() {
 		return monthlyBonus;
 	}
@@ -60,17 +63,18 @@ public class TeamLeader extends ProductionWorker {
 	public void setTrainingHoursAttended(double trainingHoursAttended) {
 		this.trainingHoursAttended = trainingHoursAttended;
 	}
+
 	@Override
 	public String toString() {
 		String str = super.toString();
-		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance().format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
-				+ "\nTraining hours attended: " + trainingHoursAttended;
+		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance().format(monthlyBonus)
+				+ "\nRequired training hours: " + requiredTrainingHours + "\nTraining hours attended: "
+				+ trainingHoursAttended;
 		return str;
 	}
+
 	void info() {
 		System.out.println(this);
 	}
-	
-	
 
 }
