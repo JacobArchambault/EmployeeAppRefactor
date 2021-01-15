@@ -67,6 +67,9 @@ public class TeamLeader extends ProductionWorker {
 				+ "\nTraining hours attended: " + trainingHoursAttended;
 		return str;
 	}
+	void info() {
+		System.out.println(this);
+	}
 	
 	
 
