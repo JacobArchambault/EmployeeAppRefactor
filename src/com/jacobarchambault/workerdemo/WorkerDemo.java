@@ -9,7 +9,7 @@ public class WorkerDemo {
 
 		// Display the data.
 		System.out.println("Here's the first team leader.");
-		System.out.println(tl);
+		info(tl);
 
 		// Create another ProductionWorker object and use the
 		// set methods.
@@ -25,6 +25,10 @@ public class WorkerDemo {
 
 		// Display the data.
 		System.out.println("\nHere's the second team leader.");
-		System.out.println(pw2);
+		info(pw2);
+	}
+
+	private static void info(TeamLeader tl) {
+		System.out.println(tl);
 	}
 }
