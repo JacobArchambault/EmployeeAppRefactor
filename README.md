@@ -30,4 +30,5 @@ Getters may be divided into two kinds: those that simply return the value of the
 ## Clean up unused code immediately
 ## Use only one primary constructor.
 ## Named variables are a code smell.
+## Prefer accurate data types over validation logic. 
 
