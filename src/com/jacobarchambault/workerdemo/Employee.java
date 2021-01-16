@@ -19,13 +19,6 @@ class Employee {
 		hireDate = date;
 	}
 
-	/**
-	 * The no-arg constructor initializes an object with empty strings for name,
-	 * employee number, and hire date.
-	 */
-	public Employee() {
-		this("", "", "");
-	}
 
 	/**
 	 * The setName method sets the employee's name.
