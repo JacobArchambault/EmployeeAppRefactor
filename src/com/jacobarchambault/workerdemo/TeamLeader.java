@@ -32,7 +32,7 @@ class TeamLeader implements Employee {
 		return str;
 	}
 
-	void info() {
+	public void info() {
 		System.out.println(this);
 	}
 

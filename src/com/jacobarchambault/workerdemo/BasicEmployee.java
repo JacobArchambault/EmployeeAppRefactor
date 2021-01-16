@@ -67,4 +67,7 @@ class BasicEmployee implements Employee {
 		return str;
 	}
 
+	public void info() {
+		System.out.println(this);
+	}
 }
