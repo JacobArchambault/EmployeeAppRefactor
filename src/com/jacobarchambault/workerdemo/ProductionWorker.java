@@ -11,9 +11,9 @@ class ProductionWorker implements Employee {
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;
 	static final int NIGHT_SHIFT = 2;
-	int shift; // The employee's shift
-	double payRate; // The employee's pay rate
 	Employee base;
+	double payRate; // The employee's pay rate
+	int shift; // The employee's shift
 
 	/**
 	 * This constructor initializes an object with a name, employee number, hire

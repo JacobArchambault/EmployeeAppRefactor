@@ -8,9 +8,9 @@ import java.text.NumberFormat;
  */
 class TeamLeader implements Employee {
 	private double monthlyBonus;
+	private Employee origin;
 	private double requiredTrainingHours;
 	private double trainingHoursAttended;
-	private Employee origin;
 
 	TeamLeader(
 			Employee employee,
