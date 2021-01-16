@@ -14,8 +14,10 @@ By definition, an object's public fields can be obtained directly from anywhere 
 
 To avoid these problems, use private fields, thus ensuring the methods a field's value are accessible by are limited in number and clearly defined.
 
-## 4 Avoid empty getters and setters
-A getter is a method belonging to an object, in accordance with its type, that a distinct object may use to obtain the values of that object's private fields. Getters are called so from the common practice of naming them with a ```get``` prefix, followed by the field whose value they obtain by it, e.g. ```getName```.  to obtain the value of an object's ```name``` field, ```getAddress``` for that of an ```address``` field, etc.
+## 4 Avoid empty getters
+A getter is a method belonging to an object, in accordance with its type, that a distinct object may use to obtain the values of that object's private fields. Getters are called so from the common practice of naming them with a ```get``` prefix, followed by the field whose value they obtain by it, e.g. ```getName```.  to obtain the value of an object's ```name``` field, ```getAddress``` for that of an ```address``` field, etc. A getter is empty if it does nothing else besides return the value of its associated field.
 
 The use of public fields and empty getters have certain advantages relative to each other: making a field public and obtaining its value directly has the immediate advantage of simpler syntax with less boilerplate code; using getters has the advantage of procuring a single place for changes in the manner in which a field's value may is obtained in case these become necessary at a later point in time. But both have in common that by making values accessible anywhere in an application, they make an application's code more sprawling and less maintainable, increasing the likelihood of other developers introducing accidental errors and of malicious actors introducing intentional ones. Instead, consider relegating the relevant functionality of the object type obtaining the field back to the object type to which the field belongs directly. 
- 
+
+## 5 Avoid getters, period.
+Getters may be divided into two kinds: those that simply return the value of the field that they get, i.e. empty getters, and those that perform any additional functionality in the process of returning the object. The reasons for avoiding the first have been given above. The reasons for avoiding the second are semantic: namely such functions aren't properly getters, but functions that get and, in addition, do other things as well. Consequently, these functions should be named in a manner representing their full functionality to ensure their proper use by others 
