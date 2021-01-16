@@ -12,9 +12,9 @@ class TeamLeader extends ProductionWorker {
 	private double requiredTrainingHours;
 	private double trainingHoursAttended;
 
-	TeamLeader(String n, String num, LocalDate date, int sh, double rate, double bonus, double requiredHours,
+	TeamLeader(BasicEmployee basicEmployee, int sh, double rate, double bonus, double requiredHours,
 			double hoursAttended) {
-		super(n, num, date, sh, rate);
+		super(basicEmployee, sh, rate);
 		monthlyBonus = bonus;
 		requiredTrainingHours = requiredHours;
 		trainingHoursAttended = hoursAttended;

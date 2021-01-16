@@ -6,13 +6,14 @@ import java.time.LocalDate;
  * The ProductionWorker class stores data about an employee who is a production
  * worker for the Employee and ProductionWorker Classes programming challenge.
  */
-class ProductionWorker extends BasicEmployee {
+class ProductionWorker {
 
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;
 	static final int NIGHT_SHIFT = 2;
-	 int shift; // The employee's shift
+	int shift; // The employee's shift
 	double payRate; // The employee's pay rate
+	BasicEmployee base;
 
 	/**
 	 * This constructor initializes an object with a name, employee number, hire
@@ -24,10 +25,10 @@ class ProductionWorker extends BasicEmployee {
 	 * @param sh   The employee's shift.
 	 * @param rate The employee's pay rate.
 	 */
-	ProductionWorker(String n, String num, LocalDate date, int sh, double rate) {
-		super(n, num, date);
+	ProductionWorker(BasicEmployee basicEmployee, int sh, double rate) {
 		shift = sh;
 		payRate = rate;
+		base = basicEmployee;
 	}
 
 
@@ -39,7 +40,7 @@ class ProductionWorker extends BasicEmployee {
 	@Override
 	public String toString() {
 		DecimalFormat currency = new DecimalFormat("$##,##0.00");
-		String str = super.toString();
+		String str = base.toString();
 		str += "\nShift: ";
 		if (shift == DAY_SHIFT)
 			str += "Day";
