@@ -68,15 +68,6 @@ class ProductionWorker extends Employee {
 	}
 
 	/**
-	 * The getPayRate method returns the employee's pay rate.
-	 * 
-	 * @return The employee's pay rate.
-	 */
-	public double getPayRate() {
-		return payRate;
-	}
-
-	/**
 	 * toString method
 	 * 
 	 * @return A reference to a String representation of the object.

@@ -19,7 +19,6 @@ class TeamLeader extends ProductionWorker {
 		trainingHoursAttended = hoursAttended;
 	}
 
-
 	@Override
 	public String toString() {
 		String str = super.toString();
