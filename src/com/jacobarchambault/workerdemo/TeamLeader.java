@@ -20,13 +20,6 @@ class TeamLeader extends ProductionWorker {
 	}
 
 	/**
-	 * @param monthlyBonus
-	 */
-	public void setMonthlyBonus(double monthlyBonus) {
-		this.monthlyBonus = monthlyBonus;
-	}
-
-	/**
 	 * @param requiredTrainingHours
 	 */
 	public void setRequiredTrainingHours(double requiredTrainingHours) {
