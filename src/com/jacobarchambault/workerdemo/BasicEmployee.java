@@ -1,7 +1,6 @@
 package com.jacobarchambault.workerdemo;
 
 import java.time.LocalDate;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class BasicEmployee implements Employee {
@@ -69,5 +68,9 @@ class BasicEmployee implements Employee {
 
 	public void info() {
 		System.out.println(this);
+	}
+	public void info(String introMessage) {
+		System.out.println(introMessage);
+		info();
 	}
 }

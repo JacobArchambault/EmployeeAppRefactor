@@ -36,7 +36,7 @@ class TeamLeader implements Employee {
 		System.out.println(this);
 	}
 
-	void info(String introMessage) {
+	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
 	}

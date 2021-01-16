@@ -1,6 +1,5 @@
 package com.jacobarchambault.workerdemo;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 /**
@@ -60,7 +59,7 @@ class ProductionWorker implements Employee {
 		System.out.println(this);
 	}
 
-	void info(String introMessage) {
+	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
 	}
