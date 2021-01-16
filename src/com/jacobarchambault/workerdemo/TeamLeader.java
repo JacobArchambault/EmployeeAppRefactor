@@ -7,9 +7,9 @@ import java.text.NumberFormat;
  *
  */
 class TeamLeader extends ProductionWorker {
-	double monthlyBonus;
-	double requiredTrainingHours;
-	double trainingHoursAttended;
+	private double monthlyBonus;
+	private double requiredTrainingHours;
+	private double trainingHoursAttended;
 
 	TeamLeader(String n, String num, String date, int sh, double rate, double bonus, double requiredHours,
 			double hoursAttended) {
