@@ -59,15 +59,6 @@ class ProductionWorker extends Employee {
 	}
 
 	/**
-	 * The getShift method returns the employee's shift.
-	 * 
-	 * @return The employee's shift.
-	 */
-	public int getShift() {
-		return shift;
-	}
-
-	/**
 	 * toString method
 	 * 
 	 * @return A reference to a String representation of the object.
