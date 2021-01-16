@@ -14,11 +14,12 @@ public class WorkerDemo {
 						.info("Here's a production worker.");
 		System.out.println();
 		// Create a TeamLeader object.
-		new TeamLeader(new BasicEmployee("Jack Johnson", "321-B", LocalDate.of(2004,  12,  20)), 5000, 20, 10)
-		.info("Here's a Team Leader");
+		new TeamLeader(new BasicEmployee("Jack Johnson", "321-B", LocalDate.of(2004, 12, 20)), 5000, 20, 10)
+				.info("Here's a Team Leader");
 
 		System.out.println();
 		new TeamLeader(new ProductionWorker(new BasicEmployee("Joan Jones", "222-L", LocalDate.now()),
-				ProductionWorker.NIGHT_SHIFT, 18.50), 10000, 30, 10).info("Here's a team leader who is also a production worker.");
+				ProductionWorker.NIGHT_SHIFT, 18.50), 10000, 30, 10)
+						.info("Here's a team leader who is also a production worker.");
 	}
 }
