@@ -1,9 +1,11 @@
 package com.jacobarchambault.workerdemo;
 
+import java.time.LocalDate;
+
 class Employee {
 	String name; // Employee name
 	String employeeNumber; // Employee number
-	String hireDate; // Employee hire date
+	LocalDate hireDate; // Employee hire date
 
 	/**
 	 * This constructor initializes an object with a name, employee number, and hire
@@ -13,7 +15,7 @@ class Employee {
 	 * @param num  The employee's number.
 	 * @param date The employee's hire date.
 	 */
-	Employee(String n, String num, String date) {
+	Employee(String n, String num, LocalDate date) {
 		name = n;
 		setEmployeeNumber(num);
 		hireDate = date;

@@ -1,5 +1,6 @@
 package com.jacobarchambault.workerdemo;
 import java.text.DecimalFormat;
+import java.time.LocalDate;
 
 /**
  * The ProductionWorker class stores data about an employee who is a production
@@ -23,7 +24,7 @@ class ProductionWorker extends Employee {
 	 * @param sh   The employee's shift.
 	 * @param rate The employee's pay rate.
 	 */
-	ProductionWorker(String n, String num, String date, int sh, double rate) {
+	ProductionWorker(String n, String num, LocalDate date, int sh, double rate) {
 		super(n, num, date);
 		shift = sh;
 		payRate = rate;
