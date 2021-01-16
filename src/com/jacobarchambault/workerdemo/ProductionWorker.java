@@ -29,14 +29,6 @@ class ProductionWorker extends Employee {
 		payRate = rate;
 	}
 
-	/**
-	 * The setShift method sets the employee's shift.
-	 * 
-	 * @param s The employee's shift.
-	 */
-	public void setShift(int s) {
-		shift = s;
-	}
 
 	/**
 	 * The setPayRate method sets the employee's pay rate.
