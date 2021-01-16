@@ -25,12 +25,14 @@ class BasicEmployee implements Employee {
 		hireDate = date;
 	}
 
+	@Override
 	public void info() {
 		printName();
 		printNumber();
 		printHireDate();
 	}
 
+	@Override
 	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();

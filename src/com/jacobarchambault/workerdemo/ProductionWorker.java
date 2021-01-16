@@ -34,8 +34,23 @@ class ProductionWorker implements Employee {
 		base = basicEmployee;
 	}
 
+	@Override
 	public void info() {
 		base.info();
+		printShift();
+		String str = "Hourly Pay Rate: " + NumberFormat.getCurrencyInstance()
+				.format(payRate);
+
+		System.out.println(str);
+	}
+
+	@Override
+	public void info(String introMessage) {
+		System.out.println(introMessage);
+		info();
+	}
+
+	private void printShift() {
 		String str = "Shift: ";
 		if (shift == DAY_SHIFT)
 			str += "Day";
@@ -43,15 +58,7 @@ class ProductionWorker implements Employee {
 			str += "Night";
 		else
 			str += "INVALID SHIFT NUMBER";
-		str += "\nHourly Pay Rate: " + NumberFormat.getCurrencyInstance()
-				.format(payRate);
-
 		System.out.println(str);
-	}
-
-	public void info(String introMessage) {
-		System.out.println(introMessage);
-		info();
 	}
 
 }

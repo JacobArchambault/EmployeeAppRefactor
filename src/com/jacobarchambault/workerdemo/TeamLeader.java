@@ -23,6 +23,7 @@ class TeamLeader implements Employee {
 		trainingHoursAttended = hoursAttended;
 	}
 
+	@Override
 	public void info() {
 		origin.info();
 		String str = "Monthly bonus: " + NumberFormat.getCurrencyInstance()
@@ -31,6 +32,7 @@ class TeamLeader implements Employee {
 		System.out.println(str);
 	}
 
+	@Override
 	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
