@@ -19,13 +19,6 @@ class TeamLeader extends ProductionWorker {
 		trainingHoursAttended = hoursAttended;
 	}
 
-	/**
-	 * @param requiredTrainingHours
-	 */
-	public void setRequiredTrainingHours(double requiredTrainingHours) {
-		this.requiredTrainingHours = requiredTrainingHours;
-	}
-
 
 	@Override
 	public String toString() {
