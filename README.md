@@ -24,8 +24,10 @@ Getters may be divided into two kinds: those that simply return the value of the
 
 ## Avoid setters
 ## Fields should be immutable
-## Explicit access modifiers are a code smell
+## Minimize explicit access modifiers
 ## One primary constructor
 ## Composition over inheritance
 ## Clean up unused code immediately
 ## Use only one primary constructor.
+## Named variables are a code smell.
+
