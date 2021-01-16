@@ -33,15 +33,6 @@ class Employee {
 	}
 
 	/**
-	 * The setHireDate method sets the employee's hire date.
-	 * 
-	 * @param h The employee's hire date.
-	 */
-	public void setHireDate(String h) {
-		hireDate = h;
-	}
-
-	/**
 	 * The getName method returns the employee's name.
 	 * 
 	 * @return The employee's name.
