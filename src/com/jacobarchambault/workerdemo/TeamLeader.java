@@ -12,7 +12,11 @@ class TeamLeader implements Employee {
 	private double trainingHoursAttended;
 	private Employee origin;
 
-	TeamLeader(Employee employee, double bonus, double requiredHours, double hoursAttended) {
+	TeamLeader(
+			Employee employee,
+			double bonus,
+			double requiredHours,
+			double hoursAttended) {
 		origin = employee;
 		monthlyBonus = bonus;
 		requiredTrainingHours = requiredHours;
@@ -21,19 +25,28 @@ class TeamLeader implements Employee {
 
 	@Override
 	public String toString() {
-		String str = origin.toString();
-		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance().format(monthlyBonus)
+		String str = origin
+				.toString();
+		str += "\nMonthly bonus: " + NumberFormat
+				.getCurrencyInstance()
+				.format(
+						monthlyBonus)
 				+ "\nRequired training hours: " + requiredTrainingHours + "\nTraining hours attended: "
 				+ trainingHoursAttended;
 		return str;
 	}
 
 	void info() {
-		System.out.println(this);
+		System.out
+				.println(
+						this);
 	}
 
-	void info(String introMessage) {
-		System.out.println(introMessage);
+	void info(
+			String introMessage) {
+		System.out
+				.println(
+						introMessage);
 		info();
 	}
 
