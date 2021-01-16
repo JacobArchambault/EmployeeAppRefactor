@@ -32,15 +32,6 @@ class Employee {
 	}
 
 	/**
-	 * The getHireDate method returns the employee's hire date.
-	 * 
-	 * @return The employee's hire date.
-	 */
-	public String getHireDate() {
-		return hireDate;
-	}
-
-	/**
 	 * isValidEmpNum is a method that determines whether a string is a valid
 	 * employee number.
 	 * 
