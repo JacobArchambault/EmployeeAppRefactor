@@ -33,10 +33,6 @@ class TeamLeader extends ProductionWorker {
 		this.requiredTrainingHours = requiredTrainingHours;
 	}
 
-	public double getTrainingHoursAttended() {
-		return trainingHoursAttended;
-	}
-
 	/**
 	 * @param trainingHoursAttended
 	 */
