@@ -23,17 +23,12 @@ class TeamLeader implements Employee {
 		trainingHoursAttended = hoursAttended;
 	}
 
-	@Override
-	public String toString() {
+	public void info() {
 		String str = origin.toString();
 		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance()
 				.format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
 				+ "\nTraining hours attended: " + trainingHoursAttended;
-		return str;
-	}
-
-	public void info() {
-		System.out.println(this);
+		System.out.println(str);
 	}
 
 	public void info(String introMessage) {
