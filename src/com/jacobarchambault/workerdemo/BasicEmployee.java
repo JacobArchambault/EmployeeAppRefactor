@@ -21,20 +21,8 @@ class BasicEmployee implements Employee {
 			String num,
 			LocalDate date) {
 		name = n;
-		setEmployeeNumber(num);
+		employeeNumber = num;
 		hireDate = date;
-	}
-
-	/**
-	 * The setEmployeeNumber method sets the employee's number.
-	 * 
-	 * @param e The employee's number.
-	 */
-	public void setEmployeeNumber(String e) {
-		if (isValidEmpNum(e))
-			employeeNumber = e;
-		else
-			employeeNumber = "";
 	}
 
 	/**
@@ -50,15 +38,9 @@ class BasicEmployee implements Employee {
 				.matches();
 	}
 
-	/**
-	 * toString method
-	 * 
-	 * @return A reference to a String representation of the object.
-	 */
-
 	public void info() {
 		String str = "Name: " + name + "\nEmployee Number: ";
-		if (employeeNumber == "")
+		if (!isValidEmpNum(this.employeeNumber))
 			str += "INVALID EMPLOYEE NUMBER";
 		else
 			str += employeeNumber;
@@ -66,6 +48,7 @@ class BasicEmployee implements Employee {
 
 		System.out.println(str);
 	}
+
 	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
