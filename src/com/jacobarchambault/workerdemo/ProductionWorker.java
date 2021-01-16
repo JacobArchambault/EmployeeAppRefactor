@@ -38,16 +38,18 @@ class ProductionWorker implements Employee {
 	public void info() {
 		base.info();
 		printShift();
-		String str = "Hourly Pay Rate: " + NumberFormat.getCurrencyInstance()
-				.format(payRate);
-
-		System.out.println(str);
+		printPayRate();
 	}
 
 	@Override
 	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
+	}
+
+	private void printPayRate() {
+		System.out.println("Hourly Pay Rate: " + NumberFormat.getCurrencyInstance()
+		.format(payRate));
 	}
 
 	private void printShift() {
