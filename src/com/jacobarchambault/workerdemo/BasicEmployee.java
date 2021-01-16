@@ -55,19 +55,16 @@ class BasicEmployee implements Employee {
 	 * 
 	 * @return A reference to a String representation of the object.
 	 */
-	@Override
-	public String toString() {
+
+	public void info() {
 		String str = "Name: " + name + "\nEmployee Number: ";
 		if (employeeNumber == "")
 			str += "INVALID EMPLOYEE NUMBER";
 		else
 			str += employeeNumber;
 		str += ("\nHire Date: " + hireDate);
-		return str;
-	}
 
-	public void info() {
-		System.out.println(this);
+		System.out.println(str);
 	}
 	public void info(String introMessage) {
 		System.out.println(introMessage);

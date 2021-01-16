@@ -34,15 +34,9 @@ class ProductionWorker implements Employee {
 		base = basicEmployee;
 	}
 
-	/**
-	 * toString method
-	 * 
-	 * @return A reference to a String representation of the object.
-	 */
-	@Override
-	public String toString() {
-		String str = base.toString();
-		str += "\nShift: ";
+	public void info() {
+		base.info();
+		String str = "Shift: ";
 		if (shift == DAY_SHIFT)
 			str += "Day";
 		else if (shift == NIGHT_SHIFT)
@@ -52,11 +46,7 @@ class ProductionWorker implements Employee {
 		str += "\nHourly Pay Rate: " + NumberFormat.getCurrencyInstance()
 				.format(payRate);
 
-		return str;
-	}
-
-	public void info() {
-		System.out.println(this);
+		System.out.println(str);
 	}
 
 	public void info(String introMessage) {

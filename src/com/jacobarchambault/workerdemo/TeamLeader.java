@@ -24,8 +24,8 @@ class TeamLeader implements Employee {
 	}
 
 	public void info() {
-		String str = origin.toString();
-		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance()
+		origin.info();
+		String str = "Monthly bonus: " + NumberFormat.getCurrencyInstance()
 				.format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
 				+ "\nTraining hours attended: " + trainingHoursAttended;
 		System.out.println(str);
