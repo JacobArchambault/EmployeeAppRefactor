@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
  * The ProductionWorker class stores data about an employee who is a production
  * worker for the Employee and ProductionWorker Classes programming challenge.
  */
-class ProductionWorker {
+class ProductionWorker implements Employee {
 
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;

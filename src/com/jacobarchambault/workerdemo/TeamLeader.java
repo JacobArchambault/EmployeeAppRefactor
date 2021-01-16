@@ -6,14 +6,15 @@ import java.text.NumberFormat;
  * @author jacobarchambault
  *
  */
-class TeamLeader extends ProductionWorker {
+class TeamLeader implements Employee {
 	private double monthlyBonus;
 	private double requiredTrainingHours;
 	private double trainingHoursAttended;
+	private Employee origin;
 
-	TeamLeader(Employee basicEmployee, int sh, double rate, double bonus, double requiredHours,
+	TeamLeader(Employee employee, double bonus, double requiredHours,
 			double hoursAttended) {
-		super(basicEmployee, sh, rate);
+		origin = employee;
 		monthlyBonus = bonus;
 		requiredTrainingHours = requiredHours;
 		trainingHoursAttended = hoursAttended;
@@ -21,7 +22,7 @@ class TeamLeader extends ProductionWorker {
 
 	@Override
 	public String toString() {
-		String str = super.toString();
+		String str = origin.toString();
 		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance().format(monthlyBonus)
 				+ "\nRequired training hours: " + requiredTrainingHours + "\nTraining hours attended: "
 				+ trainingHoursAttended;
