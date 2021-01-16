@@ -6,7 +6,7 @@ import java.time.LocalDate;
  * The ProductionWorker class stores data about an employee who is a production
  * worker for the Employee and ProductionWorker Classes programming challenge.
  */
-class ProductionWorker extends Employee {
+class ProductionWorker extends BasicEmployee {
 
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;
