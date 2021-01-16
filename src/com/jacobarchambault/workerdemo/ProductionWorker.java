@@ -30,17 +30,6 @@ class ProductionWorker extends Employee {
 	}
 
 	/**
-	 * The no-arg constructor initializes an object with null strings for name,
-	 * employee number, and hire date. The day shift is selected, and the pay rate
-	 * is set to 0.0.
-	 */
-	public ProductionWorker() {
-		super();
-		shift = DAY_SHIFT;
-		payRate = 0.0;
-	}
-
-	/**
 	 * The setShift method sets the employee's shift.
 	 * 
 	 * @param s The employee's shift.
