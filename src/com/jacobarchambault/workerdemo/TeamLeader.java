@@ -1,18 +1,17 @@
 package com.jacobarchambault.workerdemo;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 /**
  * @author jacobarchambault
  *
  */
-public class TeamLeader extends ProductionWorker {
+class TeamLeader extends ProductionWorker {
 	double monthlyBonus;
 	double requiredTrainingHours;
 	double trainingHoursAttended;
 
-	public TeamLeader(String n, String num, String date, int sh, double rate, double bonus, double requiredHours,
+	TeamLeader(String n, String num, String date, int sh, double rate, double bonus, double requiredHours,
 			double hoursAttended) {
 		super(n, num, date, sh, rate);
 		monthlyBonus = bonus;
@@ -20,7 +19,7 @@ public class TeamLeader extends ProductionWorker {
 		trainingHoursAttended = hoursAttended;
 	}
 
-	public TeamLeader(double bonus, double hoursRequired, double hoursAttended) {
+	TeamLeader(double bonus, double hoursRequired, double hoursAttended) {
 		super();
 		monthlyBonus = bonus;
 		requiredTrainingHours = hoursRequired;

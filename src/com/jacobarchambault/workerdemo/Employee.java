@@ -1,6 +1,6 @@
 package com.jacobarchambault.workerdemo;
 
-public class Employee {
+class Employee {
 	private String name; // Employee name
 	private String employeeNumber; // Employee number
 	private String hireDate; // Employee hire date
@@ -13,7 +13,7 @@ public class Employee {
 	 * @param num  The employee's number.
 	 * @param date The employee's hire date.
 	 */
-	public Employee(String n, String num, String date) {
+	Employee(String n, String num, String date) {
 		name = n;
 		setEmployeeNumber(num);
 		hireDate = date;

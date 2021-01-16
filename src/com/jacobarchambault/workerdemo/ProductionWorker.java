@@ -5,11 +5,11 @@ import java.text.DecimalFormat;
  * The ProductionWorker class stores data about an employee who is a production
  * worker for the Employee and ProductionWorker Classes programming challenge.
  */
-public class ProductionWorker extends Employee {
+class ProductionWorker extends Employee {
 
 	// Constants for the day and night shifts.
-	public static final int DAY_SHIFT = 1;
-	public static final int NIGHT_SHIFT = 2;
+	static final int DAY_SHIFT = 1;
+	static final int NIGHT_SHIFT = 2;
 	private int shift; // The employee's shift
 	private double payRate; // The employee's pay rate
 
@@ -23,7 +23,7 @@ public class ProductionWorker extends Employee {
 	 * @param sh   The employee's shift.
 	 * @param rate The employee's pay rate.
 	 */
-	public ProductionWorker(String n, String num, String date, int sh, double rate) {
+	ProductionWorker(String n, String num, String date, int sh, double rate) {
 		super(n, num, date);
 		shift = sh;
 		payRate = rate;
