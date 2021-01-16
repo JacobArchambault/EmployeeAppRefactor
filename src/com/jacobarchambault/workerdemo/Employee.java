@@ -19,7 +19,6 @@ class Employee {
 		hireDate = date;
 	}
 
-
 	/**
 	 * The setEmployeeNumber method sets the employee's number.
 	 * 
@@ -33,15 +32,6 @@ class Employee {
 	}
 
 	/**
-	 * The getEmployeeNumber method returns the employee's number.
-	 * 
-	 * @return The employee's number.
-	 */
-	public String getEmployeeNumber() {
-		return employeeNumber;
-	}
-
-	/**
 	 * The getHireDate method returns the employee's hire date.
 	 * 
 	 * @return The employee's hire date.
@@ -51,13 +41,13 @@ class Employee {
 	}
 
 	/**
-	 * isValidEmpNum is a  method that determines whether a string is a valid
+	 * isValidEmpNum is a method that determines whether a string is a valid
 	 * employee number.
 	 * 
 	 * @param e The string containing an employee number.
 	 * @return true if e references a valid ID number, false otherwise.
 	 */
-	 boolean isValidEmpNum(String e) {
+	boolean isValidEmpNum(String e) {
 		boolean status = true;
 		if (e.length() != 5) {
 			status = false;
