@@ -46,9 +46,9 @@ class BasicEmployee implements Employee {
 	 * @return true if e references a valid ID number, false otherwise.
 	 */
 	boolean isValidEmpNum(String e) {
-		Pattern p = Pattern.compile("[0-9]{3}-[A-z]");
-		Matcher m = p.matcher(e);
-		return m.matches();
+		return Pattern.compile("[0-9]{3}-[A-z]")
+				.matcher(e)
+				.matches();
 	}
 
 	/**
