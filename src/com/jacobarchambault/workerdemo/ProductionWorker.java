@@ -1,6 +1,7 @@
 package com.jacobarchambault.workerdemo;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 /**
  * The ProductionWorker class stores data about an employee who is a production
@@ -41,8 +42,6 @@ class ProductionWorker implements Employee {
 	 */
 	@Override
 	public String toString() {
-		DecimalFormat currency = new DecimalFormat(
-				"$##,##0.00");
 		String str = base.toString();
 		str += "\nShift: ";
 		if (shift == DAY_SHIFT)
@@ -51,7 +50,8 @@ class ProductionWorker implements Employee {
 			str += "Night";
 		else
 			str += "INVALID SHIFT NUMBER";
-		str += "\nHourly Pay Rate: " + currency.format(payRate);
+		str += "\nHourly Pay Rate: " + NumberFormat.getCurrencyInstance()
+				.format(payRate);
 
 		return str;
 	}
