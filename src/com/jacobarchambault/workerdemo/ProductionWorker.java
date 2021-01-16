@@ -1,4 +1,5 @@
 package com.jacobarchambault.workerdemo;
+
 import java.text.DecimalFormat;
 
 /**
@@ -30,7 +31,6 @@ class ProductionWorker implements Employee {
 		base = basicEmployee;
 	}
 
-
 	/**
 	 * toString method
 	 * 
@@ -51,4 +51,14 @@ class ProductionWorker implements Employee {
 
 		return str;
 	}
+	
+	void info() {
+		System.out.println(this);
+	}
+
+	void info(String introMessage) {
+		System.out.println(introMessage);
+		info();
+	}
+
 }

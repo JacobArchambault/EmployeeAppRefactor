@@ -12,8 +12,7 @@ class TeamLeader implements Employee {
 	private double trainingHoursAttended;
 	private Employee origin;
 
-	TeamLeader(Employee employee, double bonus, double requiredHours,
-			double hoursAttended) {
+	TeamLeader(Employee employee, double bonus, double requiredHours, double hoursAttended) {
 		origin = employee;
 		monthlyBonus = bonus;
 		requiredTrainingHours = requiredHours;
@@ -32,6 +31,7 @@ class TeamLeader implements Employee {
 	void info() {
 		System.out.println(this);
 	}
+
 	void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
