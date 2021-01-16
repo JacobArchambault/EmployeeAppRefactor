@@ -33,15 +33,6 @@ class Employee {
 	}
 
 	/**
-	 * The getName method returns the employee's name.
-	 * 
-	 * @return The employee's name.
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
 	 * The getEmployeeNumber method returns the employee's number.
 	 * 
 	 * @return The employee's number.
