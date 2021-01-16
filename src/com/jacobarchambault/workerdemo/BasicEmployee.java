@@ -2,7 +2,7 @@ package com.jacobarchambault.workerdemo;
 
 import java.time.LocalDate;
 
-class BasicEmployee {
+class BasicEmployee implements Employee {
 	String name; // Employee name
 	String employeeNumber; // Employee number
 	LocalDate hireDate; // Employee hire date

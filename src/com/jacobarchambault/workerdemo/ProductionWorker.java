@@ -1,6 +1,5 @@
 package com.jacobarchambault.workerdemo;
 import java.text.DecimalFormat;
-import java.time.LocalDate;
 
 /**
  * The ProductionWorker class stores data about an employee who is a production
@@ -13,7 +12,7 @@ class ProductionWorker {
 	static final int NIGHT_SHIFT = 2;
 	int shift; // The employee's shift
 	double payRate; // The employee's pay rate
-	BasicEmployee base;
+	Employee base;
 
 	/**
 	 * This constructor initializes an object with a name, employee number, hire
@@ -25,7 +24,7 @@ class ProductionWorker {
 	 * @param sh   The employee's shift.
 	 * @param rate The employee's pay rate.
 	 */
-	ProductionWorker(BasicEmployee basicEmployee, int sh, double rate) {
+	ProductionWorker(Employee basicEmployee, int sh, double rate) {
 		shift = sh;
 		payRate = rate;
 		base = basicEmployee;

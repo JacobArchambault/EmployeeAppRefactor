@@ -1,7 +1,6 @@
 package com.jacobarchambault.workerdemo;
 
 import java.text.NumberFormat;
-import java.time.LocalDate;
 
 /**
  * @author jacobarchambault
@@ -12,7 +11,7 @@ class TeamLeader extends ProductionWorker {
 	private double requiredTrainingHours;
 	private double trainingHoursAttended;
 
-	TeamLeader(BasicEmployee basicEmployee, int sh, double rate, double bonus, double requiredHours,
+	TeamLeader(Employee basicEmployee, int sh, double rate, double bonus, double requiredHours,
 			double hoursAttended) {
 		super(basicEmployee, sh, rate);
 		monthlyBonus = bonus;
