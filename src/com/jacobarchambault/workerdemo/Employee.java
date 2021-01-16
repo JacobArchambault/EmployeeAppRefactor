@@ -21,15 +21,6 @@ class Employee {
 
 
 	/**
-	 * The setName method sets the employee's name.
-	 * 
-	 * @param n The employee's name.
-	 */
-	public void setName(String n) {
-		name = n;
-	}
-
-	/**
 	 * The setEmployeeNumber method sets the employee's number.
 	 * 
 	 * @param e The employee's number.
