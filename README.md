@@ -32,3 +32,4 @@ Getters may be divided into two kinds: those that simply return the value of the
 ## Named variables are a code smell.
 ## Prefer accurate data types over validation logic. 
 
+## Remove validation logic from constructors
