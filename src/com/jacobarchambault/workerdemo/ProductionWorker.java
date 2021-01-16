@@ -31,15 +31,6 @@ class ProductionWorker extends Employee {
 
 
 	/**
-	 * The setPayRate method sets the employee's pay rate.
-	 * 
-	 * @param p The employee's pay rate.
-	 */
-	public void setPayRate(double p) {
-		payRate = p;
-	}
-
-	/**
 	 * toString method
 	 * 
 	 * @return A reference to a String representation of the object.
