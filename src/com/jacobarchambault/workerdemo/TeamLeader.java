@@ -31,5 +31,9 @@ class TeamLeader extends ProductionWorker {
 	void info() {
 		System.out.println(this);
 	}
+	void info(String introMessage) {
+		System.out.println(introMessage);
+		info();
+	}
 
 }
