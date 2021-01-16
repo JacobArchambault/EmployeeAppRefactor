@@ -56,6 +56,7 @@ class BasicEmployee implements Employee {
 	 * 
 	 * @return A reference to a String representation of the object.
 	 */
+	@Override
 	public String toString() {
 		String str = "Name: " + name + "\nEmployee Number: ";
 		if (employeeNumber == "")
