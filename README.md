@@ -22,6 +22,8 @@ The use of public fields and empty getters have certain advantages relative to e
 ## 5 Avoid getters, period.
 Getters may be divided into two kinds: those that simply return the value of the field that they get, i.e. empty getters, and those that perform any additional functionality in the process of returning the object. The reasons for avoiding the first have been given above. The reasons for avoiding the second are semantic: namely such functions aren't properly getters, but functions that get and, in addition, do other things as well. Consequently, these functions should be named in a manner representing their full functionality to ensure their proper use by others 
 
+## Avoid setters
+## Fields should be immutable
 ## Explicit access modifiers are a code smell
 
 
