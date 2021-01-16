@@ -26,10 +26,6 @@ class TeamLeader extends ProductionWorker {
 		trainingHoursAttended = hoursAttended;
 	}
 
-	public double getMonthlyBonus() {
-		return monthlyBonus;
-	}
-
 	/**
 	 * @param monthlyBonus
 	 */
