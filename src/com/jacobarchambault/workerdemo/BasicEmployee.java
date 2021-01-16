@@ -39,7 +39,8 @@ class BasicEmployee implements Employee {
 	}
 
 	public void info() {
-		String str = "Name: " + name + "\nEmployee Number: ";
+		printName();
+		String str = "Employee Number: ";
 		if (!isValidEmpNum(this.employeeNumber))
 			str += "INVALID EMPLOYEE NUMBER";
 		else
@@ -47,6 +48,10 @@ class BasicEmployee implements Employee {
 		str += ("\nHire Date: " + hireDate);
 
 		System.out.println(str);
+	}
+
+	private void printName() {
+		System.out.println("Name: " + name);
 	}
 
 	public void info(String introMessage) {
