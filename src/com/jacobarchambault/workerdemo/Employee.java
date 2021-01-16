@@ -1,9 +1,9 @@
 package com.jacobarchambault.workerdemo;
 
 class Employee {
-	private String name; // Employee name
-	private String employeeNumber; // Employee number
-	private String hireDate; // Employee hire date
+	String name; // Employee name
+	String employeeNumber; // Employee number
+	String hireDate; // Employee hire date
 
 	/**
 	 * This constructor initializes an object with a name, employee number, and hire
@@ -85,13 +85,13 @@ class Employee {
 	}
 
 	/**
-	 * isValidEmpNum is a private method that determines whether a string is a valid
+	 * isValidEmpNum is a  method that determines whether a string is a valid
 	 * employee number.
 	 * 
 	 * @param e The string containing an employee number.
 	 * @return true if e references a valid ID number, false otherwise.
 	 */
-	private boolean isValidEmpNum(String e) {
+	 boolean isValidEmpNum(String e) {
 		boolean status = true;
 		if (e.length() != 5) {
 			status = false;

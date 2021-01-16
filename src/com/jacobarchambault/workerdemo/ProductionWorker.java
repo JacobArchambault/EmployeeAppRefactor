@@ -10,8 +10,8 @@ class ProductionWorker extends Employee {
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;
 	static final int NIGHT_SHIFT = 2;
-	private int shift; // The employee's shift
-	private double payRate; // The employee's pay rate
+	 int shift; // The employee's shift
+	double payRate; // The employee's pay rate
 
 	/**
 	 * This constructor initializes an object with a name, employee number, hire
