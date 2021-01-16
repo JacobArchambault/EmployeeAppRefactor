@@ -49,33 +49,23 @@ class BasicEmployee implements Employee {
 	boolean isValidEmpNum(
 			String e) {
 		boolean status = true;
-		if (e
-				.length() != 5) {
+		if (e.length() != 5) {
 			status = false;
 		} else {
-			if ((!Character
-					.isDigit(
-							e
-									.charAt(
-											0)))
-					|| (!Character
-							.isDigit(
-									e
-											.charAt(
-													1)))
-					|| (!Character
-							.isDigit(
-									e
-											.charAt(
-													2)))
-					|| (e
-							.charAt(
-									3) != '-')
-					|| (!Character
-							.isLetter(
-									e
-											.charAt(
-													4))))
+			if ((!Character.isDigit(
+					e.charAt(
+							0)))
+					|| (!Character.isDigit(
+							e.charAt(
+									1)))
+					|| (!Character.isDigit(
+							e.charAt(
+									2)))
+					|| (e.charAt(
+							3) != '-')
+					|| (!Character.isLetter(
+							e.charAt(
+									4))))
 				status = false;
 		}
 		return status;

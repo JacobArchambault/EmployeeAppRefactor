@@ -25,10 +25,8 @@ class TeamLeader implements Employee {
 
 	@Override
 	public String toString() {
-		String str = origin
-				.toString();
-		str += "\nMonthly bonus: " + NumberFormat
-				.getCurrencyInstance()
+		String str = origin.toString();
+		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance()
 				.format(
 						monthlyBonus)
 				+ "\nRequired training hours: " + requiredTrainingHours + "\nTraining hours attended: "
@@ -37,16 +35,14 @@ class TeamLeader implements Employee {
 	}
 
 	void info() {
-		System.out
-				.println(
-						this);
+		System.out.println(
+				this);
 	}
 
 	void info(
 			String introMessage) {
-		System.out
-				.println(
-						introMessage);
+		System.out.println(
+				introMessage);
 		info();
 	}
 
