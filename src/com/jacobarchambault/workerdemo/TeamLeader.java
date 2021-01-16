@@ -19,22 +19,11 @@ class TeamLeader extends ProductionWorker {
 		trainingHoursAttended = hoursAttended;
 	}
 
-	TeamLeader(double bonus, double hoursRequired, double hoursAttended) {
-		super();
-		monthlyBonus = bonus;
-		requiredTrainingHours = hoursRequired;
-		trainingHoursAttended = hoursAttended;
-	}
-
 	/**
 	 * @param monthlyBonus
 	 */
 	public void setMonthlyBonus(double monthlyBonus) {
 		this.monthlyBonus = monthlyBonus;
-	}
-
-	public double getRequiredTrainingHours() {
-		return requiredTrainingHours;
 	}
 
 	/**
