@@ -27,22 +27,17 @@ class TeamLeader implements Employee {
 	public String toString() {
 		String str = origin.toString();
 		str += "\nMonthly bonus: " + NumberFormat.getCurrencyInstance()
-				.format(
-						monthlyBonus)
-				+ "\nRequired training hours: " + requiredTrainingHours + "\nTraining hours attended: "
-				+ trainingHoursAttended;
+				.format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
+				+ "\nTraining hours attended: " + trainingHoursAttended;
 		return str;
 	}
 
 	void info() {
-		System.out.println(
-				this);
+		System.out.println(this);
 	}
 
-	void info(
-			String introMessage) {
-		System.out.println(
-				introMessage);
+	void info(String introMessage) {
+		System.out.println(introMessage);
 		info();
 	}
 

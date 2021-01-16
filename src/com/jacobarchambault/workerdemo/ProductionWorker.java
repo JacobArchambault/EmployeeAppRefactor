@@ -51,21 +51,17 @@ class ProductionWorker implements Employee {
 			str += "Night";
 		else
 			str += "INVALID SHIFT NUMBER";
-		str += "\nHourly Pay Rate: " + currency.format(
-				payRate);
+		str += "\nHourly Pay Rate: " + currency.format(payRate);
 
 		return str;
 	}
 
 	void info() {
-		System.out.println(
-				this);
+		System.out.println(this);
 	}
 
-	void info(
-			String introMessage) {
-		System.out.println(
-				introMessage);
+	void info(String introMessage) {
+		System.out.println(introMessage);
 		info();
 	}
 
