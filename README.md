@@ -33,3 +33,5 @@ Getters may be divided into two kinds: those that simply return the value of the
 ## Prefer accurate data types over validation logic. 
 
 ## Remove validation logic from constructors
+## Method names should be a noun or a verb, nothing more
+If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullname()```.
