@@ -27,8 +27,8 @@ class TeamLeader implements Employee {
 	public void info() {
 		origin.info();
 		printMonthlyBonus();
-		String str = "Required training hours: " + requiredTrainingHours
-				+ "\nTraining hours attended: " + trainingHoursAttended;
+		printRequiredTrainingHours();
+		String str = "Training hours attended: " + trainingHoursAttended;
 		System.out.println(str);
 	}
 
@@ -41,6 +41,10 @@ class TeamLeader implements Employee {
 	private void printMonthlyBonus() {
 		System.out.println("Monthly bonus: " + NumberFormat.getCurrencyInstance()
 		.format(monthlyBonus));
+	}
+
+	private void printRequiredTrainingHours() {
+		System.out.println("Required training hours: " + requiredTrainingHours);
 	}
 
 }
