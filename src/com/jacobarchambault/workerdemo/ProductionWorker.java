@@ -49,7 +49,7 @@ class ProductionWorker implements Employee {
 
 	private void printPayRate() {
 		System.out.println("Hourly Pay Rate: " + NumberFormat.getCurrencyInstance()
-		.format(payRate));
+				.format(payRate));
 	}
 
 	private void printShift() {

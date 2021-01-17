@@ -26,8 +26,8 @@ class TeamLeader implements Employee {
 	@Override
 	public void info() {
 		origin.info();
-		String str = "Monthly bonus: " + NumberFormat.getCurrencyInstance()
-				.format(monthlyBonus) + "\nRequired training hours: " + requiredTrainingHours
+		printMonthlyBonus();
+		String str = "Required training hours: " + requiredTrainingHours
 				+ "\nTraining hours attended: " + trainingHoursAttended;
 		System.out.println(str);
 	}
@@ -36,6 +36,11 @@ class TeamLeader implements Employee {
 	public void info(String introMessage) {
 		System.out.println(introMessage);
 		info();
+	}
+
+	private void printMonthlyBonus() {
+		System.out.println("Monthly bonus: " + NumberFormat.getCurrencyInstance()
+		.format(monthlyBonus));
 	}
 
 }
