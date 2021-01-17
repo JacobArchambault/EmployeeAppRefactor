@@ -1,5 +1,7 @@
 # EmployeeAppRefactor
-A git tutorial showing how to change an application printing out employee info to implement best practices like strong encapsulation, composition over inheritance, immutability, and dependency injection.
+A git tutorial showing how to change an application printing out employee info to implement best practices like strong encapsulation, composition over inheritance, immutability, and dependency injection. 
+
+The application begins with its main classes linked to each other by implementation inheritance in Java's default package with mutable fields, large methods, and all fields open to change from anywhere via getters and setters. Its end point is an application with classes in a named package linked to each other by composition using decorator patterns to illustrate multiple possible composition relationships, methods refactored so as to generally have a body no larger than three lines, public getters and setters eliminated to enforce stronger restrictions on field encapsulation, and fields and classes made final to enforce immutability.
 
 ## 1 Place all classes in a package
 Using the default package opens up the possibility for class name ambiguity, which can lead to compilation errors.
