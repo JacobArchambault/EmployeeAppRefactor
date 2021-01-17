@@ -3,10 +3,10 @@ package com.jacobarchambault.workerdemo;
 import java.time.LocalDate;
 import java.util.regex.Pattern;
 
-class BasicEmployee implements Employee {
-	String employeeNumber; // Employee number
-	LocalDate hireDate; // Employee hire date
-	String name; // Employee name
+final class BasicEmployee implements Employee {
+	private final String employeeNumber; // Employee number
+	private final LocalDate hireDate; // Employee hire date
+	private final String name; // Employee name
 
 	/**
 	 * This constructor initializes an object with a name, employee number, and hire

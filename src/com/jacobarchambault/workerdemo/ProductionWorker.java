@@ -6,14 +6,14 @@ import java.text.NumberFormat;
  * The ProductionWorker class stores data about an employee who is a production
  * worker for the Employee and ProductionWorker Classes programming challenge.
  */
-class ProductionWorker implements Employee {
+final class ProductionWorker implements Employee {
 
 	// Constants for the day and night shifts.
 	static final int DAY_SHIFT = 1;
 	static final int NIGHT_SHIFT = 2;
-	Employee base;
-	double payRate; // The employee's pay rate
-	int shift; // The employee's shift
+	private final Employee base;
+	private final double payRate; // The employee's pay rate
+	private final int shift; // The employee's shift
 
 	/**
 	 * This constructor initializes an object with a name, employee number, hire

@@ -8,9 +8,9 @@ package com.jacobarchambault.workerdemo;
  *
  */
 public class Trainee implements Employee {
-	private double requiredTrainingHours;
-	private Employee source;
-	private double trainingHoursAttended;
+	private final Employee base;
+	private final double requiredTrainingHours;
+	private final double trainingHoursAttended;
 
 	/**
 	 * 
@@ -19,14 +19,14 @@ public class Trainee implements Employee {
 			Employee employee,
 			double requiredHours,
 			double hoursAttended) {
-		source = employee;
+		base = employee;
 		requiredTrainingHours = requiredHours;
 		trainingHoursAttended = hoursAttended;
 	}
 
 	@Override
 	public void info() {
-		source.info();
+		base.info();
 		printTrainingHoursAttended();
 		printRequiredTrainingHours();
 

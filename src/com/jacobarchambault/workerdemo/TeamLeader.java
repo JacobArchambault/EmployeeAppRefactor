@@ -7,8 +7,8 @@ import java.text.NumberFormat;
  *
  */
 class TeamLeader implements Employee {
-	private double monthlyBonus;
-	private Employee origin;
+	private final double monthlyBonus;
+	private final Employee origin;
 
 	TeamLeader(
 			Employee employee,
