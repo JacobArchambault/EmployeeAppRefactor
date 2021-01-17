@@ -24,7 +24,6 @@ Getters may be divided into two kinds: those that simply return the value of the
 
 ## Avoid setters
 ## Fields should be immutable
-## Minimize explicit access modifiers
 ## One primary constructor
 ## Composition over inheritance
 ## Clean up unused code immediately
