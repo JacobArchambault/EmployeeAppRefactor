@@ -27,9 +27,8 @@ class TeamLeader implements Employee {
 	public void info() {
 		origin.info();
 		printMonthlyBonus();
+		printTrainingHoursAttended();
 		printRequiredTrainingHours();
-		String str = "Training hours attended: " + trainingHoursAttended;
-		System.out.println(str);
 	}
 
 	@Override
@@ -45,6 +44,10 @@ class TeamLeader implements Employee {
 
 	private void printRequiredTrainingHours() {
 		System.out.println("Required training hours: " + requiredTrainingHours);
+	}
+
+	private void printTrainingHoursAttended() {
+		System.out.println("Training hours attended: " + trainingHoursAttended);
 	}
 
 }
