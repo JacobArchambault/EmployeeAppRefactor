@@ -26,7 +26,6 @@ public class Trainee implements Employee {
 
 	@Override
 	public void info() {
-		// TODO Auto-generated method stub
 		source.info();
 		printTrainingHoursAttended();
 		printRequiredTrainingHours();

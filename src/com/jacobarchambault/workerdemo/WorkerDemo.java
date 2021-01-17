@@ -42,6 +42,17 @@ public class WorkerDemo {
 						ProductionWorker.NIGHT_SHIFT,
 						18.50),
 				30,
-				10).info("Here's a production worker who's also a trainee.");
+				10).info("Here's a production worker who's also a trainee: ");
+
+		System.out.println();
+		new Trainee(
+				new TeamLeader(
+						new BasicEmployee(
+								"Coriolanus Snow",
+								"354-J",
+								LocalDate.now()),
+						5000),
+				30,
+				20).info("Hear's a trainee who's also a team leader: ");
 	}
 }
