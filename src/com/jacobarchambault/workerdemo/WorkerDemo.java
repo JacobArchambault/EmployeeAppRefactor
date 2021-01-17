@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class WorkerDemo {
 
 	public static void main(String[] args) {
-		System.out.println("Now our classes are composable\n");
+		System.out.println("Illustrating composable decorators: \n");
 
 		// Create a ProductionWorker object and pass the initialization
 		// data to the constructor.
@@ -30,12 +30,10 @@ public class WorkerDemo {
 						LocalDate.of(2004,
 								12,
 								20)),
-				5000,
-				20,
-				10).info("Here's a Team Leader");
+				5000).info("Here's a Team Leader");
 
 		System.out.println();
-		new TeamLeader(
+		new Trainee(
 				new ProductionWorker(
 						new BasicEmployee(
 								"Joan Jones",
@@ -43,8 +41,7 @@ public class WorkerDemo {
 								LocalDate.now()),
 						ProductionWorker.NIGHT_SHIFT,
 						18.50),
-				10000,
 				30,
-				10).info("Here's a team leader who is also a production worker.");
+				10).info("Here's a production worker who's also a trainee.");
 	}
 }
