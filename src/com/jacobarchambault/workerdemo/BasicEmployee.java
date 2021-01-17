@@ -47,12 +47,8 @@ class BasicEmployee implements Employee {
 	}
 
 	private void printNumber() {
-		String str = "Employee Number: ";
-		if (!isValidEmpNum(this.employeeNumber))
-			str += "INVALID EMPLOYEE NUMBER";
-		else
-			str += employeeNumber;
-		System.out.println(str);
+		String num = isValidEmpNum(employeeNumber) ? employeeNumber : "INVALID EMPLOYEE NUMBER";
+		System.out.println("Employee Number: " + num);
 	}
 
 	/**
