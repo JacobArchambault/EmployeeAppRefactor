@@ -6,6 +6,9 @@ The application begins with its main classes linked to each other by implementat
 ## 1 Place all classes in a package
 Using the default package opens up the possibility for class name ambiguity, which can lead to compilation errors.
 
+## 2 Use version control, and clean up unused code immediately
+Code should be placed under a system of version control such as git. Version control allows a programmer to keep track of the previous stages of a project, and to revert back to an earlier stage should a problem arise. This means that if there is a need to recover a wrongly deleted piece of functionality, it may be done through version control. Most languages have one or several code cleanup tools that are able to partially or even fully automate the process of finding and removing unused chunks of code. Cleaning up unused code as soon as it becomes unused ensures other developers don't mistakenly build on code marked for deletion, preventing sprawl and helping to direct other developers to the preferred way of implementing a piece of functionality elsewhere in an application.
+
 ## 2 Encapsulation
 Encapsulation refers to the practice of enclosing fields in classes with the methods they act on. Properly done, encapsulation prevents code sprawl and allows developers to use objects without being forced to attend to how their methods work internally. The following provide suggestions for how to best make use of this practice.
 
@@ -29,14 +32,14 @@ Getters may be divided into two kinds: those that simply return the value of the
 
 ### 2.5 Avoid setters
 A setter is a method that changes the value of a (usually private) field it is associated with in an object according to the type it implements. Setters get their name in a manner analogous to getters, and engender the same problems as getters do. In addition, because setters change the values of their associated fields, methods making use of setters inherently suffer from a phenomenon called temporal coupling, which occurs when an object's functionality is strongly dependent on its surrounding code. In particular, temporal coupling means that there is no guarantee that calling the same method with the exact same inputs will always return the same result. To avoid this, avoid setters and prefer immutable to mutable fields. 
+
 ## Fields should be immutable
-## One primary constructor
+
+### 2.6 Method names should be a noun or a verb, nothing more
+If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullName()```.
 ## Composition over inheritance
-## Clean up unused code immediately
 ## Use only one primary constructor.
 ## Named variables are a code smell.
 ## Prefer accurate data types over validation logic. 
 
 ## Remove validation logic from constructors
-## Method names should be a noun or a verb, nothing more
-If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullName()```.
