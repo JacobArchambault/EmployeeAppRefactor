@@ -34,7 +34,7 @@ Getters may be divided into two kinds: those that simply return the value of the
 A setter is a method that changes the value of a (usually private) field it is associated with in an object according to the type it implements. Setters get their name in a manner analogous to getters, and engender the same problems as getters do. In addition, because setters change the values of their associated fields, methods making use of setters inherently suffer from a phenomenon called temporal coupling, which occurs when an object's functionality is strongly dependent on its surrounding code. In particular, temporal coupling means that there is no guarantee that calling the same method with the exact same inputs will always return the same result. To avoid this, avoid setters and prefer immutable to mutable fields. 
 
 ## Fields should be immutable
-
+An immutable field is one whose value does not change at any point after its creation throughout the course of an application. Consequently, objects whose fields are immutable reliably produce the same output or perform the same action whenever they are invoked with like inputs. This is not the case for mutable objects, i.e. those whose fields may change their value. 
 ### 2.6 Method names should be a noun or a verb, nothing more
 If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullName()```.
 ## Composition over inheritance
