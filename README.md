@@ -6,8 +6,11 @@ The application begins with its main classes linked to each other by implementat
 ## 1 Place all classes in a package
 Using the default package opens up the possibility for class name ambiguity, which can lead to compilation errors.
 
-## 2 Use version control, and clean up unused code immediately
-Code should be placed under a system of version control such as git. Version control allows a programmer to keep track of the previous stages of a project, and to revert back to an earlier stage should a problem arise. This means that if there is a need to recover a wrongly deleted piece of functionality, it may be done through version control. Most languages have one or several code cleanup tools that are able to partially or even fully automate the process of finding and removing unused chunks of code. Cleaning up unused code as soon as it becomes unused ensures other developers don't mistakenly build on code marked for deletion, preventing sprawl and helping to direct other developers to the preferred way of implementing a piece of functionality elsewhere in an application.
+## 2 Use version control 
+Code should be placed under a system of version control such as git. Version control allows a programmer to keep track of the previous stages of a project, and to revert back to an earlier stage should a problem arise. This means that if there is a need to recover a wrongly deleted piece of functionality, it may be done through version control. 
+
+## 2.1 Clean up unused code immediately
+Since version control allows for prior functionality to be stored in a codebase's history, there is little reason to keep unneeded code in your current version past the point when it's needed. Most languages have one or several code cleanup tools that are able to partially or even fully automate the process of finding and removing unused chunks of code. Cleaning up unused code as soon as it becomes unused ensures other developers don't mistakenly build on code marked for deletion, preventing sprawl and helping to direct other developers to the preferred way of implementing a piece of functionality elsewhere in an application.
 
 ## 3 Encapsulation and object cohesion
 Encapsulation refers to the practice of enclosing fields in classes with the methods they act on. Properly done, encapsulation prevents code sprawl and allows developers to use objects without being forced to attend to how their methods work internally. The following provide suggestions for how to best make use of this practice. Loosely speaking, object cohesion is a closely related property of objects according to which an object's fields and methods belong together, particularly in the sense that each of its methods' direct dependencies are given by all and only its fields. Coherence allows for functionality to be limited and clearly defined, leading code to be more reusable and objects to be more easily switched out should a substitution of a different object be desired.
@@ -32,14 +35,28 @@ The use of public fields and empty getters have certain advantages relative to e
 ### 3.4 Avoid getters, period.
 Getters may be divided into two kinds: those that simply return the value of the field that they get, i.e. empty getters, and those that perform any additional functionality in the process of returning the object. The reasons for avoiding the first have been given above. The reasons for avoiding the second are semantic: namely such functions aren't properly getters, but functions that get and, in addition, do other things as well. Consequently, these functions should be named in a manner representing their full functionality to ensure their proper use by others.
 
-### 3.5 Avoid setters
-A setter is a method that changes the value of a (usually private) field it is associated with in an object according to the type it implements. Setters get their name in a manner analogous to getters, and engender the same problems as getters do. In addition, because setters change the values of their associated fields, methods making use of setters inherently suffer from a phenomenon called temporal coupling, which occurs when an object's functionality is strongly dependent on its surrounding code. In particular, temporal coupling means that there is no guarantee that calling the same method with the exact same inputs will always return the same result. To avoid this, avoid setters and prefer immutable to mutable fields. 
-
-### 3.6 Method names should be a noun or a verb, nothing more
+### 3.5 Method names should be a noun or a verb, nothing more
 If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullName()```.
 
-## Fields should be immutable
-An immutable field is one whose value does not change at any point after its creation throughout the course of an application. Consequently, objects whose fields are immutable reliably produce the same output or perform the same action whenever they are invoked with like inputs. This is not the case for mutable objects, i.e. those whose fields may change their value. 
+## 4 Immutability and multithreading, and thread safety
+### 4.1 Immutability
+An immutable field is one whose value does not change at any point after its creation throughout the course of an application. Consequently, objects whose fields are immutable reliably produce the same output or perform the same action whenever they are invoked with like inputs. This is not the case for mutable objects, i.e. those whose fields may change their value. An application is immutable if the values used in it are not changed in the course of an application. 
+
+### 4.2 Synchronous applications
+The most basic applications run synchronously. On a synchronously running app, an app begins at a particular entry point, usually a main method, then runs through the application line-by-line until it reaches a point, e.g. a method or function, that has its own internal set of instructions to carry out. At this point, it will 'step into' that function, carry out that function's internal code step by step, repeating this process for each function it encounters, then continuing on back to its original entry point when complete. By analogy with sewing, the path this code runs through as it is executed, entering into and leaving functions as they are encountered, is called a thread, and synchronous code is one that only consists of one thread. 
+
+### 4.3 Asynchronous applications and multithreaded applications
+In more advanced applications, the initial application process may be split up at various points, so that different paths of code are being run through simultaneously. This application's code is said to be asynchronous, and an application which splits up into these multiple simultaneously running paths is called a multithreaded application. Because they execute multiple code paths simultaneously multithreaded applications are usually faster and more performant than single-threaded ones.
+
+### 4.4 Thread safety
+Since threads in a multithreaded application may nevertheless depend on changes made in other concurrently running threads, and since the order in which different threads are completed may vary and is not guaranteed, programs with mutable objects require careful handling to ensure that threads work as desired and do not behave or break in unpredictable ways. Applications which do not take these precautions are said not to be thread safe. 
+
+### 4.5 Immutability guarantees thread safety
+The greatest practical benefit associated with immutability is that immutable applications are ipso facto thread safe. Because of this, they eliminate unpredictable functionality that might otherwise stem from the design of a multithreaded application, making them more secure. 
+
+### 4.6 Avoid setters
+A setter is a method that changes the value of a (usually private) field it is associated with in an object according to the type it implements. Setters get their name in a manner analogous to getters, and engender the same problems as getters do. In addition, because setters change the values of their associated fields, methods making use of setters inherently suffer from a phenomenon called temporal coupling, which occurs when an object's functionality is strongly dependent on its surrounding code. In particular, temporal coupling means that there is no guarantee that calling the same method with the exact same inputs will always return the same result. To avoid this, avoid setters and prefer immutable to mutable fields. 
+
 ## Composition over inheritance
 
 Inject dependencies
