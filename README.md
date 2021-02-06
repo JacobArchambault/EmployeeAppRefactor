@@ -9,7 +9,7 @@ Using the default package opens up the possibility for class name ambiguity, whi
 ## 2 Use version control 
 Code should be placed under a system of version control such as git. Version control allows a programmer to keep track of the previous stages of a project, and to revert back to an earlier stage should a problem arise. This means that if there is a need to recover a wrongly deleted piece of functionality, it may be done through version control. 
 
-## 2.1 Clean up unused code immediately
+### 2.1 Clean up unused code immediately
 Since version control allows for prior functionality to be stored in a codebase's history, there is little reason to keep unneeded code in your current version past the point when it's needed. Most languages have one or several code cleanup tools that are able to partially or even fully automate the process of finding and removing unused chunks of code. Cleaning up unused code as soon as it becomes unused ensures other developers don't mistakenly build on code marked for deletion, preventing sprawl and helping to direct other developers to the preferred way of implementing a piece of functionality elsewhere in an application.
 
 ## 3 Encapsulation and object cohesion
@@ -38,9 +38,10 @@ Getters may be divided into two kinds: those that simply return the value of the
 ### 3.5 Method names should be a noun or a verb, nothing more
 If your methods have longer names than this, it is usually a sign that your class is too large and coarse-grained, and should be broken down into smaller classes. Void methods should name actions, e.g. ```print```, ```save```. Return methods should name what they return , e.g. ```fullName()```.
 
-## 4 Immutability and multithreading, and thread safety
-### 4.1 Immutability
-An immutable field is one whose value does not change at any point after its creation throughout the course of an application. Consequently, objects whose fields are immutable reliably produce the same output or perform the same action whenever they are invoked with like inputs. This is not the case for mutable objects, i.e. those whose fields may change their value. An application is immutable if the values used in it are not changed in the course of an application. 
+## 4 Immutability, multithreading and thread safety
+### 4.1 Immutability and pure functions
+An immutable field is one whose value does not change at any point after its creation throughout the course of an application. A pure function is one which reliably produces the same output or performs the same action whenever it is invoked with like inputs. While 
+This is not the case for mutable objects, i.e. those whose fields may change their value. An application is immutable if the values used in it are not changed in the course of an application. 
 
 ### 4.2 Synchronous applications
 The most basic applications run synchronously. On a synchronously running app, an app begins at a particular entry point, usually a main method, then runs through the application line-by-line until it reaches a point, e.g. a method or function, that has its own internal set of instructions to carry out. At this point, it will 'step into' that function, carry out that function's internal code step by step, repeating this process for each function it encounters, then continuing on back at the point where the function was encountered when complete. By analogy with sewing, the path this code runs through as it is executed, entering into and leaving functions as they are encountered, is called a thread. Synchronous code is that which only consists of one thread. 
