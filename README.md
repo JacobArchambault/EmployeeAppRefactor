@@ -1,4 +1,4 @@
-# EmployeeAppRefactor
+# Employee app refactor
 A Java tutorial showing how to implement best practices like strong encapsulation, composition over inheritance, immutability, and dependency injection, via an application printing out information for various types of employees.
 
 The application begins with its main classes linked to each other by implementation inheritance in Java's default package with mutable fields, large methods, and all fields open to change from anywhere via getters and setters. Its end point is an application with classes in a named package linked to each other by composition using decorator patterns to illustrate multiple possible composition relationships, methods refactored so as to generally have a body no larger than three lines, public getters and setters eliminated to enforce stronger restrictions on field encapsulation, and fields and classes made final to enforce immutability.
