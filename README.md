@@ -64,6 +64,7 @@ In object oriented programming, inheritance is a many-to-one relation between cl
 
 The primary theoretical justification for inheritance is that it supports the idea of object-oriented programming objects as modeling real life ones: just as e.g. living things are classified according to species which may themselves be grouped together under a common genus, so too OOP objects making use of inheritance belong to types which are themselves subtypes of other types. The primary practical justification for inheritance is that it allows for code to be made usable by select classes that may need it without thereby making it accessible everywhere.
 
+The primary disadvantages of inheritance are that it leads to classes being tightly coupled together, to larger, less cohesive objects, and to a child class' code being hidden in its parent class instead of being immediately viewable in the class itself. 
 ## Inject dependencies
 ## Prefer pure dependency injection over dependency injection containers.
 ## Named variables are a code smell.
