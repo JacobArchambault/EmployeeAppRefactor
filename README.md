@@ -53,7 +53,7 @@ However, since threads in a multithreaded application may nevertheless depend on
 ### 3.5 Immutability guarantees thread safety
 The greatest practical benefit associated with immutability is that immutable applications are ipso facto thread safe. Because of this, they eliminate unpredictable functionality that might otherwise stem from the design of a multithreaded application, making them more reliable and secure. 
 
-### 3.6 Avoid setters
+### 3.6 [Avoid setters](https://www.infoworld.com/article/2073723/why-getter-and-setter-methods-are-evil.html)
 One practical consequence of preferring immutable to mutable objects is that setter methods should be avoided. A setter is a method that changes the value of a (usually private) field it is associated with in an object according to the type it implements. Setters get their name in a manner analogous to getters, and engender many of the same problems as getters do. In addition, because setters change the values of their associated fields, methods making use of setters inherently suffer from a phenomenon called temporal coupling, which occurs when an object's functionality is strongly dependent on its surrounding code. In particular, temporal coupling means that there is no guarantee that calling the same method with the exact same inputs will always return the same result. To avoid this, avoid setters and prefer immutable to mutable fields. 
 
 ## 4 Composition over inheritance
