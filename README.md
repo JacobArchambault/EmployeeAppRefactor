@@ -39,7 +39,7 @@ If your methods have longer names than this, it is usually a sign that your clas
 
 ## 3 Immutability, multithreading and thread safety
 ### 3.1 Immutability
-An field is immutable if its value may not change at any point after its creation throughout the course of an application, and mutable otherwise. We can call an object immutable if, in addition, all of its methods reliably return the same output whenever they are invoked with like inputs, and mutable otherwise. An application or library is immutable if all of its object types are immutable. 
+A field is immutable if its value may not change at any point after its creation throughout the course of an application, and mutable otherwise. We can call an object immutable if, in addition, all of its methods reliably return the same output whenever they are invoked with like inputs, and mutable otherwise. An application or library is immutable if all of its object types are immutable. 
 
 ### 3.2 Synchronous applications
 The most basic applications run synchronously. On a synchronously running app, an app begins at a particular entry point, usually a main method, then runs through the application line-by-line until it reaches a point, e.g. a method or function, that has its own internal set of instructions to carry out. At this point, it will 'step into' that function, carry out that function's internal code step by step, repeating this process for each function it encounters, then continuing on back at the point where the function was encountered when complete. By analogy with sewing, the path this code runs through as it is executed, entering into and leaving functions as they are encountered, is called a thread. Synchronous code is that which is executed along only a single thread. 
